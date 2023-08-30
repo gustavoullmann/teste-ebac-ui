@@ -10,6 +10,10 @@ context('Funcionalidade login', () => {
         cy.visit(site)
     });
 
+    afterEach(() => {
+        cy.screenshot()
+    });
+
     it('Deve fazer login com sucesso', () => {
         cy.get('#username').type(usuario)
         cy.get('#password').type(senha)
