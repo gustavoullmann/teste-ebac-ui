@@ -18,7 +18,7 @@ describe('Funcionalidade Página de produtos', () => {
         cy.get('[class = "product-block grid"]')
             .first()
             .click()
-        cy.get('.button-variable-item-M').click()
+        cy.get('.button-variable-item-S').click()
         cy.get('.button-variable-item-Blue').click()
         cy.get('.plus').click()
         cy.get('.single_add_to_cart_button').click()
