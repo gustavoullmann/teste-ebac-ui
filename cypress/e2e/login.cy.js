@@ -1,8 +1,8 @@
 /// <reference types = "cypress"/>
 
 let site = 'http://lojaebac.ebaconline.art.br/minha-conta/';
-let usuario = 'aluno_ebac@teste.com';
-let senha = 'teste@teste.com';
+let usuario = 'teste1234@teste.com.br';
+let senha = 'testando1234';
 
 context('Funcionalidade login', () => {
 
@@ -25,13 +25,13 @@ context('Funcionalidade login', () => {
         cy.get('#username').type('usuário inexistente')
         cy.get('#password').type(senha)
         cy.get('.woocommerce-form > .button').click()
-        cy.get('.woocommerce-error > li').should('contain', 'não está cadastrado neste site')
+        cy.get('.woocommerce-error > li').should('contain', 'não está registrado neste site')
     })
 
     it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
         cy.get('#username').type(usuario)
         cy.get('#password').type('senhaInvalida')
         cy.get('.woocommerce-form > .button').click()
-        cy.get('.woocommerce-error > li').should('contain', 'Erro: a senha fornecida')
+        cy.get('.woocommerce-error > li').should('contain', 'Erro: A senha fornecida')
     })
 })
